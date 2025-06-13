@@ -1,3 +1,29 @@
-cd architectVS7.github.io
-
-echo "Hello World" > index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Maze AI Navigator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>3D Maze AI Navigator</h1>
+    </header>
+    <main>
+        <div id="controls"></div>
+        <div id="renderer-container"></div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <script src="js/ui/eventBus.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/utils/mazeUtils.js"></script>
+    <script src="js/algorithms/mazeGenerator.js"></script>
+    <script src="js/algorithms/aiNavigator.js"></script>
+    <script src="js/3d/materials.js"></script>
+    <script src="js/3d/geometry.js"></script>
+    <script src="js/3d/scene.js"></script>
+    <script src="js/ui/controls.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

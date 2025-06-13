@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #1e1e1e;
+    color: #fff;
+}
+header {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+#renderer-container {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: block;
+}
+#controls {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    z-index: 10;
+}
+button {
+    margin: 0.25rem;
+}
