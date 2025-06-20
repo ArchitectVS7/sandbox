@@ -1,0 +1,74 @@
+{
+  "ships": {
+    "dock": {
+      "description": "You stand at the main docking bay of the starship.",
+      "routes": { "north": "bridge", "west": "cargo_hold" },
+      "items": [
+        { "name": "manifest", "description": "Cargo manifest for the ship." }
+      ]
+    },
+    "bridge": {
+      "description": "The command bridge is filled with blinking consoles.",
+      "routes": { "south": "dock", "east": "engine_room", "north": "lab" },
+      "items": [
+        { "name": "console", "description": "A control console." }
+      ],
+      "npcs": ["captain"]
+    },
+    "engine_room": {
+      "description": "Engines hum with power.",
+      "routes": { "west": "bridge" },
+      "items": [
+        { "name": "toolkit", "description": "A set of engineering tools." }
+      ],
+      "npcs": ["engineer"]
+    },
+    "lab": {
+      "description": "Research equipment lines the walls.",
+      "routes": { "south": "bridge", "north": "asteroid_field" },
+      "items": [
+        { "name": "sample", "description": "A mysterious biological sample." }
+      ],
+      "npcs": ["scientist"]
+    },
+    "asteroid_field": {
+      "description": "Floating rocks surround the ship in this asteroid field.",
+      "routes": { "south": "lab" },
+      "items": [
+        { "name": "minerals", "description": "Rare minerals collected from asteroids." }
+      ]
+    },
+    "cargo_hold": {
+      "description": "Crates of supplies are stacked high.",
+      "routes": { "east": "dock" },
+      "items": [
+        { "name": "crate", "description": "A heavy crate filled with supplies." }
+      ]
+    }
+  },
+  "npcs": {
+    "captain": {
+      "location": "bridge",
+      "dialogue": "Maintain course.",
+      "stats": { "hp": 12 }
+    },
+    "engineer": {
+      "location": "engine_room",
+      "dialogue": "Engines at optimal levels.",
+      "stats": { "hp": 10 }
+    },
+    "scientist": {
+      "location": "lab",
+      "dialogue": "These samples are fascinating.",
+      "stats": { "hp": 9 }
+    }
+  },
+  "items": {
+    "manifest": { "location": "dock", "description": "Cargo manifest for the ship." },
+    "console": { "location": "bridge", "description": "A control console." },
+    "toolkit": { "location": "engine_room", "description": "A set of engineering tools." },
+    "sample": { "location": "lab", "description": "A mysterious biological sample." },
+    "minerals": { "location": "asteroid_field", "description": "Rare minerals collected from asteroids." },
+    "crate": { "location": "cargo_hold", "description": "A heavy crate filled with supplies." }
+  }
+}

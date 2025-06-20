@@ -1,0 +1,72 @@
+{
+  "rooms": {
+    "entrance": {
+      "description": "The dungeon entrance is dim and foreboding.",
+      "exits": { "north": "hall" },
+      "items": [
+        { "name": "map", "description": "A tattered map showing nearby rooms." }
+      ]
+    },
+    "hall": {
+      "description": "A long hallway lined with torches.",
+      "exits": { "south": "entrance", "east": "armory", "west": "library", "north": "courtyard" },
+      "items": [
+        { "name": "coin", "description": "A shiny gold coin lost by someone." }
+      ],
+      "npcs": ["guard"]
+    },
+    "armory": {
+      "description": "Racks of weapons and armor fill the room.",
+      "exits": { "west": "hall" },
+      "items": [
+        { "name": "sword", "description": "A sharp steel sword." },
+        { "name": "shield", "description": "A sturdy wooden shield." }
+      ]
+    },
+    "library": {
+      "description": "Dusty shelves of ancient books.",
+      "exits": { "east": "hall" },
+      "items": [
+        { "name": "scroll", "description": "An old scroll with faded writing." }
+      ]
+    },
+    "courtyard": {
+      "description": "An open courtyard with a view of the sky.",
+      "exits": { "south": "hall", "down": "cell" },
+      "npcs": ["merchant"]
+    },
+    "cell": {
+      "description": "A dark prison cell below the courtyard.",
+      "exits": { "up": "courtyard" },
+      "items": [
+        { "name": "key", "description": "A rusty iron key." }
+      ],
+      "npcs": ["prisoner"]
+    }
+  },
+  "npcs": {
+    "guard": {
+      "location": "hall",
+      "dialogue": "The guard eyes you suspiciously.",
+      "stats": { "hp": 10 }
+    },
+    "merchant": {
+      "location": "courtyard",
+      "dialogue": "Care to trade?",
+      "stats": { "hp": 8 }
+    },
+    "prisoner": {
+      "location": "cell",
+      "dialogue": "Please get me out of here!",
+      "stats": { "hp": 5 }
+    }
+  },
+  "items": {
+    "map": { "location": "entrance", "description": "A tattered map showing nearby rooms." },
+    "coin": { "location": "hall", "description": "A shiny gold coin lost by someone." },
+    "sword": { "location": "armory", "description": "A sharp steel sword." },
+    "shield": { "location": "armory", "description": "A sturdy wooden shield." },
+    "scroll": { "location": "library", "description": "An old scroll with faded writing." },
+    "key": { "location": "cell", "description": "A rusty iron key." }
+  }
+}

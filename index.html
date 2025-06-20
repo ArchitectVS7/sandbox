@@ -1,3 +1,26 @@
-cd architectVS7.github.io
-
-echo "Hello World" > index.html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Text Adventure Demo</title>
+  <style>
+    #output { white-space: pre-wrap; border: 1px solid #ccc; padding: 10px; height: 200px; overflow-y: auto; }
+  </style>
+</head>
+<body>
+  <div id="output"></div>
+  <input id="command" type="text" placeholder="Enter command" />
+  <button id="send">Send</button>
+  <script src="browser_bundle.js"></script>
+  <script>
+    const { GameEngine, parseInput, actions, render } = window.TextAdventure;
+    const engine = new GameEngine({ parser: parseInput, actions, render });
+    engine.render('Welcome to the text adventure!');
+    document.getElementById('send').addEventListener('click', () => {
+      const cmd = document.getElementById('command').value;
+      engine.handleInput(cmd);
+      document.getElementById('command').value = '';
+    });
+  </script>
+</body>
+</html>
